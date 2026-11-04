@@ -1,0 +1,10 @@
+### 2026-11-04 18:32:07  curl -X POST http://127.0.0.1:8000/api/sync/classify/
+HTTP/1.1 422 Unprocessable Content
+date: Wed, 04 Nov 2026 09:32:07 GMT
+server: uvicorn
+content-length: 90
+content-type: application/json
+
+{"detail":[{"type":"missing","loc":["body","image"],"msg":"Field required","input":null}]}
+--- http_code=422 time_total=0.001159s
+

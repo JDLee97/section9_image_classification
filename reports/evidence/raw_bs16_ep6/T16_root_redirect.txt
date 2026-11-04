@@ -1,0 +1,10 @@
+### 2026-11-04 18:32:07  curl http://127.0.0.1:8000/
+HTTP/1.1 307 Temporary Redirect
+date: Wed, 04 Nov 2026 09:32:07 GMT
+server: uvicorn
+content-length: 0
+location: /vision/sync/
+
+
+--- http_code=307 time_total=0.000888s
+

@@ -1,0 +1,4 @@
+### 2026-11-04 18:32:07  curl -o /dev/null http://127.0.0.1:8000/vision/async/
+
+--- http_code=200 time_total=0.002093s
+

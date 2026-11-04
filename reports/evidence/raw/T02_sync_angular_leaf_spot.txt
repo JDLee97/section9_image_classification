@@ -1,0 +1,10 @@
+### 2026-11-04 17:13:01  curl -F image=@dataset/test/angular_leaf_spot/angular_leaf_spot_test.0.jpg http://127.0.0.1:8000/api/sync/classify/
+HTTP/1.1 200 OK
+date: Wed, 04 Nov 2026 08:13:00 GMT
+server: uvicorn
+content-length: 306
+content-type: application/json
+
+{"model_id":"artifacts/beans_resnet18","top1":{"label":"angular_leaf_spot","score":0.46233341097831726},"all":[{"label":"angular_leaf_spot","score":0.46233341097831726},{"label":"bean_rust","score":0.3557720482349396},{"label":"healthy","score":0.18189455568790436}],"inference_ms":16.58,"cache_hit":false}
+--- http_code=200 time_total=0.021982s
+

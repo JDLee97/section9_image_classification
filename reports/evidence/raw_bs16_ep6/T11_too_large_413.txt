@@ -1,0 +1,12 @@
+### 2026-11-04 18:32:07  curl -F image=@/mnt/c/Users/user1/AppData/Local/Temp/claude/72cd3c0effe55eeb/01939920-0379-40f2-9809-0d362c952509/scratchpad/tmpfiles/big_6MB.jpg;type=image/jpeg http://127.0.0.1:8000/api/sync/classify/
+HTTP/1.1 100 Continue
+
+HTTP/1.1 413 Content Too Large
+date: Wed, 04 Nov 2026 09:32:07 GMT
+server: uvicorn
+content-length: 50
+content-type: application/json
+
+{"detail":"5MB 이하 파일만 허용합니다."}
+--- http_code=413 time_total=0.049067s
+

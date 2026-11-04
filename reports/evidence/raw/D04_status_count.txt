@@ -1,0 +1,6 @@
+### 2026-11-04 17:32:56  psql -c SELECT status, count(*) FROM image_jobs GROUP BY status ORDER BY status;
+ status | count 
+--------+-------
+ done   |    15
+(1 row)
+

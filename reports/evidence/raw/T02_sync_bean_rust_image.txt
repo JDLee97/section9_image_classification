@@ -1,0 +1,1 @@
+dataset/test/bean_rust/bean_rust_test.0.jpg

@@ -1,0 +1,10 @@
+### 2026-11-04 17:12:58  curl http://127.0.0.1:8000/health
+HTTP/1.1 200 OK
+date: Wed, 04 Nov 2026 08:12:58 GMT
+server: uvicorn
+content-length: 15
+content-type: application/json
+
+{"status":"ok"}
+--- http_code=200 time_total=0.000994s
+

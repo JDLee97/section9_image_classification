@@ -1,0 +1,24 @@
+### 2026-11-04 18:32:18
+$ psql -c "SELECT id, status, model_id, top1_label, round(top1_score::numeric,4) AS top1_score, inference_ms, cache_hit, image_path, created_at, updated_at, updated_at-created_at AS elapsed FROM image_jobs WHERE id>=16 ORDER BY id;"
+ id | status |             model_id              | top1_label | top1_score | inference_ms | cache_hit |              image_path              |          created_at           |          updated_at           |     elapsed     
+----+--------+-----------------------------------+------------+------------+--------------+-----------+--------------------------------------+-------------------------------+-------------------------------+-----------------
+ 16 | done   | artifacts/beans_resnet18_bs16_ep6 | bean_rust  |     0.6558 |      2255.94 | f         | 725a97caa69e4029859a6c0f6d713893.bin | 2026-11-04 09:32:04.6325+00   | 2026-11-04 09:32:06.944014+00 | 00:00:02.311514
+ 17 | done   | artifacts/beans_resnet18_bs16_ep6 | healthy    |     0.7923 |         17.7 | f         | 75a42a9ed3974f2a88df5b29425718c1.bin | 2026-11-04 09:32:18.084094+00 | 2026-11-04 09:32:18.113447+00 | 00:00:00.029353
+ 18 | done   | artifacts/beans_resnet18_bs16_ep6 | healthy    |     0.7353 |        17.82 | f         | 09ad0e0163b44ad783c04146d46b68d7.bin | 2026-11-04 09:32:18.148354+00 | 2026-11-04 09:32:18.177487+00 | 00:00:00.029133
+ 19 | done   | artifacts/beans_resnet18_bs16_ep6 | healthy    |     0.9389 |        17.69 | f         | 407e3203e710488bbb961d8fd1ee3684.bin | 2026-11-04 09:32:18.212242+00 | 2026-11-04 09:32:18.241213+00 | 00:00:00.028971
+ 20 | done   | artifacts/beans_resnet18_bs16_ep6 | healthy    |     0.6788 |        17.37 | f         | d173ce83c9564febaf854ac21841e7d4.bin | 2026-11-04 09:32:18.276186+00 | 2026-11-04 09:32:18.304784+00 | 00:00:00.028598
+ 21 | done   | artifacts/beans_resnet18_bs16_ep6 | healthy    |     0.9413 |        17.92 | f         | cb8a6976ce2d416c944c674f09e2f8c4.bin | 2026-11-04 09:32:18.33991+00  | 2026-11-04 09:32:18.369283+00 | 00:00:00.029373
+ 22 | done   | artifacts/beans_resnet18_bs16_ep6 | healthy    |     0.7923 |              | t         | 9a35f11dc1734af7803d4b238f4c67ee.bin | 2026-11-04 09:32:18.402924+00 | 2026-11-04 09:32:18.411539+00 | 00:00:00.008615
+ 23 | done   | artifacts/beans_resnet18_bs16_ep6 | healthy    |     0.7353 |              | t         | 9baca73d7cc84a43a95c9258bb9b36e1.bin | 2026-11-04 09:32:18.469023+00 | 2026-11-04 09:32:18.477476+00 | 00:00:00.008453
+ 24 | done   | artifacts/beans_resnet18_bs16_ep6 | healthy    |     0.9389 |              | t         | 3fc7cad670c84d6aae214f7bc862e0c7.bin | 2026-11-04 09:32:18.535283+00 | 2026-11-04 09:32:18.546856+00 | 00:00:00.011573
+ 25 | done   | artifacts/beans_resnet18_bs16_ep6 | healthy    |     0.6788 |              | t         | a6ce42d36b35411bb61724298345e9fb.bin | 2026-11-04 09:32:18.604692+00 | 2026-11-04 09:32:18.613997+00 | 00:00:00.009305
+ 26 | done   | artifacts/beans_resnet18_bs16_ep6 | healthy    |     0.9413 |              | t         | a625ae7bb13542f9a711536caa0a78c2.bin | 2026-11-04 09:32:18.66969+00  | 2026-11-04 09:32:18.67863+00  | 00:00:00.00894
+(11 rows)
+
+$ SELECT model_id, status, count(*) FROM image_jobs GROUP BY 1,2 ORDER BY 1,2;
+             model_id              | status | count 
+-----------------------------------+--------+-------
+ artifacts/beans_resnet18          | done   |    15
+ artifacts/beans_resnet18_bs16_ep6 | done   |    11
+(2 rows)
+

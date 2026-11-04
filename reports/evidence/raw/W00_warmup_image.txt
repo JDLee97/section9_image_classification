@@ -1,0 +1,1 @@
+warmup sync image: dataset/test/angular_leaf_spot/angular_leaf_spot_test.1.jpg

@@ -1,0 +1,10 @@
+### 2026-11-04 18:32:07  curl http://127.0.0.1:8000/api/async/jobs/16/
+HTTP/1.1 200 OK
+date: Wed, 04 Nov 2026 09:32:06 GMT
+server: uvicorn
+content-length: 357
+content-type: application/json
+
+{"job_id":16,"status":"done","model_id":"artifacts/beans_resnet18_bs16_ep6","top1":{"label":"bean_rust","score":0.6558387279510498},"all":[{"label":"bean_rust","score":0.6558387279510498},{"label":"angular_leaf_spot","score":0.22451259195804596},{"label":"healthy","score":0.11964863538742065}],"inference_ms":2255.94,"cache_hit":false,"error_message":null}
+--- http_code=200 time_total=0.002818s
+

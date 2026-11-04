@@ -1,0 +1,60 @@
+{
+  "model": "artifacts/beans_resnet18_bs16_ep6",
+  "evaluated_at": "2026-11-04T18:17:03",
+  "test_dir": "dataset/test",
+  "classes": [
+    "angular_leaf_spot",
+    "bean_rust",
+    "healthy"
+  ],
+  "test_count": 128,
+  "correct": 112,
+  "test_accuracy": 0.875,
+  "macro_f1": 0.8752,
+  "per_class": {
+    "angular_leaf_spot": {
+      "support": 43,
+      "precision": 0.8163,
+      "recall": 0.9302,
+      "f1": 0.8696
+    },
+    "bean_rust": {
+      "support": 43,
+      "precision": 0.8718,
+      "recall": 0.7907,
+      "f1": 0.8293
+    },
+    "healthy": {
+      "support": 42,
+      "precision": 0.95,
+      "recall": 0.9048,
+      "f1": 0.9268
+    }
+  },
+  "confusion_matrix": {
+    "rows=gt, cols=pred": [
+      "angular_leaf_spot",
+      "bean_rust",
+      "healthy"
+    ],
+    "values": [
+      [
+        40,
+        2,
+        1
+      ],
+      [
+        8,
+        34,
+        1
+      ],
+      [
+        1,
+        3,
+        38
+      ]
+    ]
+  },
+  "elapsed_sec": 1.81,
+  "note": "확정된 모델을 Test에서 1회 평가. Test는 모델·하이퍼파라미터 선택에 사용하지 않음."
+}

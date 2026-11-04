@@ -1,0 +1,17 @@
+### 2026-11-04 17:32:55  psql -c SELECT column_name, data_type, character_maximum_length, is_nullable, column_default FROM information_schema.columns WHERE table_name='image_jobs' ORDER BY ordinal_position;
+  column_name  |        data_type         | character_maximum_length | is_nullable |             column_default             
+---------------+--------------------------+--------------------------+-------------+----------------------------------------
+ id            | integer                  |                          | NO          | nextval('image_jobs_id_seq'::regclass)
+ image_path    | character varying        |                      150 | NO          | 
+ status        | character varying        |                       20 | NO          | 
+ model_id      | character varying        |                      255 | NO          | 
+ top1_label    | character varying        |                      200 | YES         | 
+ top1_score    | double precision         |                          | YES         | 
+ all_scores    | json                     |                          | YES         | 
+ inference_ms  | double precision         |                          | YES         | 
+ cache_hit     | boolean                  |                          | YES         | 
+ error_message | text                     |                          | YES         | 
+ created_at    | timestamp with time zone |                          | NO          | 
+ updated_at    | timestamp with time zone |                          | NO          | 
+(12 rows)
+

@@ -1,0 +1,10 @@
+### 2026-11-04 17:30:53  curl http://127.0.0.1:8000/api/async/jobs/abc/
+HTTP/1.1 422 Unprocessable Content
+date: Wed, 04 Nov 2026 08:30:52 GMT
+server: uvicorn
+content-length: 151
+content-type: application/json
+
+{"detail":[{"type":"int_parsing","loc":["path","job_id"],"msg":"Input should be a valid integer, unable to parse string as an integer","input":"abc"}]}
+--- http_code=422 time_total=0.000929s
+

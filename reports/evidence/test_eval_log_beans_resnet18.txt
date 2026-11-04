@@ -1,0 +1,15 @@
+[2026-11-04T16:42:48] model=artifacts/beans_resnet18 test=128
+Test Accuracy = 0.7188 (92/128)
+Macro F1      = 0.7109
+  angular_leaf_spot  P=0.6977 R=0.6977 F1=0.6977 n=43
+  bean_rust          P=0.6970 R=0.5349 F1=0.6053 n=43
+  healthy            P=0.7500 R=0.9286 F1=0.8298 n=42
+Confusion (rows=GT, cols=PRED ['angular_leaf_spot', 'bean_rust', 'healthy'])
+  angular_leaf_spot  [30, 7, 6]
+  bean_rust          [13, 23, 7]
+  healthy            [0, 3, 39]
+오분류 24장 / 소요 2.1s
+저장: reports/data/test_metrics_beans_resnet18.json
+저장: reports/data/test_predictions_beans_resnet18.csv
+저장: reports/figures/test_confusion_beans_resnet18.png
+저장: reports/figures/test_misclassified_beans_resnet18.png

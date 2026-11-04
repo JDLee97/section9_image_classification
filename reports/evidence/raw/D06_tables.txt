@@ -1,0 +1,7 @@
+### 2026-11-04 17:32:56  psql -c \dt
+             List of relations
+ Schema |    Name    | Type  |    Owner    
+--------+------------+-------+-------------
+ public | image_jobs | table | vision_user
+(1 row)
+

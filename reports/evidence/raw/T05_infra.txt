@@ -1,0 +1,9 @@
+### 2026-11-04 17:12:58
+$ docker compose exec redis redis-cli ping
+PONG
+$ docker compose exec postgres pg_isready -U vision_user -d vision_db
+/var/run/postgresql:5432 - accepting connections
+$ docker compose ps
+NAME                          IMAGE                COMMAND                  SERVICE    CREATED       STATUS                 PORTS
+fastapi_resnet18-postgres-1   postgres:17-alpine   "docker-entrypoint.s…"   postgres   5 hours ago   Up 5 hours (healthy)   127.0.0.1:5432->5432/tcp
+fastapi_resnet18-redis-1      redis:7.4-alpine     "docker-entrypoint.s…"   redis      5 hours ago   Up 5 hours (healthy)   127.0.0.1:6379->6379/tcp

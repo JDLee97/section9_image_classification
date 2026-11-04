@@ -1,0 +1,1 @@
+T09 image (already sent once in T02_sync_bean_rust): dataset/test/bean_rust/bean_rust_test.0.jpg
